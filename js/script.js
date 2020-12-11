@@ -36,10 +36,11 @@
     const optArticleSelector = '.post',
         optTitleSelector = '.post-title',
         optTitleListSelector = '.titles';
-    const articles = document.querySelectorAll(optArticleSelector);
-    const titleList = document.querySelector(optTitleListSelector);
+
 
     const generateTitleLinks = function () {
+        const articles = document.querySelectorAll(optArticleSelector);
+        const titleList = document.querySelector(optTitleListSelector);
         /* for each article */
         let html = titleList.innerHTML;
         for (let article of articles) {
