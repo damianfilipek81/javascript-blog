@@ -24,6 +24,10 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 1.7;
+    margin: 0;
+    padding-bottom: 40px;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 
 .container {
@@ -42,7 +46,8 @@ body {
         color: lighten($color-dark, 20%);
     }
 }
-
+.blog {
+}
 /* Layout */
 
 .wrapper {
@@ -54,19 +59,20 @@ body {
     flex: 1 0 0;
 }
 
-.posts {
-    flex: 2 0 0;
-}
-
 .sidebar,
 .posts {
     background: $color-light;
     margin-right: 10px;
-    padding: 40px;
     border: 1px solid $color-dark;
     border-radius: 5px;
+    padding: 40px;
 }
-
+.posts {
+    flex: 2 0 0;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
 /* Logo */
 
 .logo {
@@ -105,9 +111,28 @@ body {
 /* Post */
 
 .post {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    padding: 40px;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+
     &.active {
-        display: block;
+        opacity: 100;
+        z-index: 1;
+        position: relative;
+        animation: active 0.8s ease-in-out;
+    }
+}
+@keyframes active {
+    from{
+        opacity: 0;
+        transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(-1, 0, 0, 180deg);
+    }
+    to{
+        opacity: 1;
+        transform: perspective(500px) translate3d(0, 0, 0);
     }
 }
 

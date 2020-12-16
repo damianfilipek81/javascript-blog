@@ -30,7 +30,7 @@
 
         /* [Done] add class 'active' to the correct article */
         targetArticle.classList.add('active');
-    }
+    };
 
 
     const optArticleSelector = '.post',
@@ -49,7 +49,7 @@
             /* find the title element, get the title from the title element */
             let articleTitle = article.querySelector(optTitleSelector).innerHTML;
             /* create HTML of the link */
-            const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>'
+            const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
             /* insert link into titleList */
             html = html + linkHTML;
         }
@@ -61,7 +61,7 @@
         for (let link of links) {
             link.addEventListener('click', titleClickHandler);
         }
-    }
+    };
     generateTitleLinks();
 
 }
