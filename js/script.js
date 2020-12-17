@@ -45,10 +45,7 @@
         const articles = document.querySelectorAll(optArticleSelector + customSelector);
         const titleList = document.querySelector(optTitleListSelector);
         /* clear contents of titleList */
-        const clearList = function () {
-            titleList.innerHTML = '';
-        };
-        clearList();
+        titleList.innerHTML = '';
         /* for each article */
         let html = titleList.innerHTML;
         for (let article of articles) {
