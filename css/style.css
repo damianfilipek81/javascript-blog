@@ -87,11 +87,44 @@ body {
   font-weight: bold;
 }
 
+.list.tags li {
+  display: inline-block;
+  padding-left: 3px;
+}
+
+.list.tags li .tag-size-6 {
+  font-size: 52px;
+}
+
+.list.tags li .tag-size-5 {
+  font-size: 42px;
+}
+
+.list.tags li .tag-size-4 {
+  font-size: 32px;
+}
+
+.list.tags li .tag-size-3 {
+  font-size: 24px;
+}
+
+.list.tags li .tag-size-2 {
+  font-size: 20px;
+}
+
+.list.tags li .tag-size-1 {
+  font-size: 15px;
+}
+
 .list-horizontal li {
   display: inline-block;
 }
 
 /* Authors */
+.authors {
+  display: inline;
+}
+
 .authors li {
   margin-bottom: 12px;
 }

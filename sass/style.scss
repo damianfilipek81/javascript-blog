@@ -46,8 +46,6 @@ body {
         color: lighten($color-dark, 20%);
     }
 }
-.blog {
-}
 /* Layout */
 
 .wrapper {
@@ -92,6 +90,28 @@ body {
     .active {
         font-weight: bold;
     }
+    &.tags li {
+        display: inline-block;
+        padding-left: 3px;
+        .tag-size-6{
+            font-size: 52px;
+        }
+        .tag-size-5{
+            font-size: 42px;
+        }
+        .tag-size-4{
+            font-size: 32px;
+        }
+        .tag-size-3{
+            font-size: 24px;
+        }
+        .tag-size-2{
+            font-size: 20px;
+        }
+        .tag-size-1{
+            font-size: 15px;
+        }
+    }
 }
 
 .list-horizontal {
@@ -106,6 +126,7 @@ body {
     li {
         margin-bottom: 12px;
     }
+    display: inline;
 }
 
 /* Post */
@@ -126,11 +147,11 @@ body {
     }
 }
 @keyframes active {
-    from{
+    from {
         opacity: 0;
         transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(-1, 0, 0, 180deg);
     }
-    to{
+    to {
         opacity: 1;
         transform: perspective(500px) translate3d(0, 0, 0);
     }
