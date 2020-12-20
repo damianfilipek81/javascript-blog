@@ -83,7 +83,8 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-4" data-tags="design tutorial backend" data-author="Kitty Toebean">
+                    <article class="post" id="article-4" data-tags="design tutorial backend"
+                        data-author="Kitty Toebean">
                         <h3 class="post-title">Article 4</h3>
                         <p class="post-author"></p>
                         <div class="post-content">
@@ -104,7 +105,8 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-5" data-tags="javascript tutorial code" data-author="Marion Berry">
+                    <article class="post" id="article-5" data-tags="javascript tutorial code"
+                        data-author="Marion Berry">
                         <h3 class="post-title">Article 5</h3>
                         <p class="post-author"></p>
                         <div class="post-content">
@@ -146,7 +148,8 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-7" data-tags="tutorial frameworks javascript" data-author="Kitty Toebean">
+                    <article class="post" id="article-7" data-tags="tutorial frameworks javascript"
+                        data-author="Kitty Toebean">
                         <h3 class="post-title">Article 7</h3>
                         <p class="post-author"></p>
                         <div class="post-content">
@@ -248,6 +251,26 @@
             </main>
         </div>
     </div>
+    <script id="template-article-link" type="text/x-handlebars-template">
+        <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+      </script>
+    <script id="template-tag-link" type="text/x-handlebars-template">
+       <li><a href="#tag-{{ id }}">{{ title }}</a></li>
+      </script>
+    <script id="template-author-link" type="text/x-handlebars-template">
+        <a href="#author-{{ id }}">{{ title }}</a>
+    </script>
+    <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+        {{#each tags}}
+        <li><a  class="{{ className }}" href="#tag-{{ tag }}">{{ tag }}</a></li>
+        {{/each}}
+    </script>
+    <script id="template-author-list-link" type="text/x-handlebars-template">
+        {{#each authors}}
+        <li><a href="#author-{{author}}">{{author}}</a>({{count}})</li>
+        {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
